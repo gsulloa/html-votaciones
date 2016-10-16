@@ -1,0 +1,62 @@
+body{
+    background: #080808;
+}
+
+.body{
+    margin-top: 30px;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-images{
+    height: 60px;
+}
+.hiddenBackground{
+    z-index: 9999;
+    background: black;
+    opacity: 0.8;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.hiddenContainer{
+    z-index: 10000;
+    background: white;
+    position: fixed;
+    height: 60%;
+    width: 60%;
+    top: 20%;
+    left: 20%;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.counter{
+    position: fixed;
+    top:0;
+    right: 0;
+    background: antiquewhite;
+    border-radius: 5px;
+    width: 300px;
+}
+
+h1{
+    font-family: "Bebas Neue";
+}
+h2,h3,h4,p,li,body,label,blockquote{
+    font-family: ubuntufont;
+}
+
+@font-face {
+    font-family: Bebas Neue;
+    src: url(../fonts/BebasNeue.otf)
+}
+@font-face {
+    font-family: ubuntufont;
+    src: url(../fonts/Ubuntu-R.ttf);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Gracias por Votar</title>
+        <link rel="icon" type="image/x-icon" href="public/images/48x48.png" />
+    <link rel="stylesheet" type="text/css" href="public/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="public/css/index.css">
+    <!-- Insert this line above script imports  -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+        <div class="container body">
+                <br><br>
+        <div class="alert alert-success">
+            <h1>Voto realizado</h1>
+            <p>Haz realizado tu voto con las siguientes respuestas:</p>
+            <ul>
+                            <li>Lista: RESPUESTA LISTA</li>
+                            <li>Consejero Academico: RESPUESTA CONSEJERO</li>
+                        </ul>
+
+            <h1 class="text-center">No olvides presionar el botón <strong>finalizar</strong> para borrar tu información de pantalla</h1>
+            <p>Si no lo haces, serás redireccionado en <span id="redireccion">7</span></p>
+        </div>
+        <a class="btn-primary btn btn-block" href="index.html">Finalizar</a>
+
+</div>
+<!-- Insert this line above script imports  -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script>
+        $('.cerrar').click(function () {
+            $($(this).parents()[0]).slideUp();
+        })
+        $(window).load(function () {
+            $('.alert').slideDown();
+        })
+    </script>
+    <script>
+        var i = 7;
+        setInterval(function () {
+            if(i == 0){
+                window.location.href = "index.html";
+            }else{
+                i = i - 1;
+                $('#redireccion').text(i);
+            }
+        }, 1000)
+    </script>
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+</body>
+</html>
